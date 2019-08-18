@@ -2,7 +2,6 @@ package com.jendi.intentfuzzer.activitites;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.ComponentInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.ProviderInfo;
 import android.content.pm.ServiceInfo;
@@ -17,12 +16,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.jendi.intentfuzzer.AppComponentAdapter;
+import com.jendi.intentfuzzer.adapters.AppComponentAdapter;
 import com.jendi.intentfuzzer.R;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class PackageInfoActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

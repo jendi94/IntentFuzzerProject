@@ -1,4 +1,4 @@
-package com.jendi.intentfuzzer;
+package com.jendi.intentfuzzer.adapters;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jendi.intentfuzzer.viewholders.PackageInfoViewHolder;
+import com.jendi.intentfuzzer.R;
 
 import java.util.List;
 
@@ -32,7 +35,7 @@ public class PackageInfoAdapter extends RecyclerView.Adapter<PackageInfoViewHold
 
     @Override
     public void onBindViewHolder(@NonNull PackageInfoViewHolder packageInfoViewHolder, int i) {
-        packageInfoViewHolder.packageName.setText(packageInfos.get(i).applicationInfo.loadLabel(context.getPackageManager()).toString());
+        packageInfoViewHolder.getPackageName().setText(packageInfos.get(i).applicationInfo.loadLabel(context.getPackageManager()).toString());
     }
 
     @Override

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.jendi.intentfuzzer.PackageInfoAdapter;
+import com.jendi.intentfuzzer.adapters.PackageInfoAdapter;
 import com.jendi.intentfuzzer.R;
 
 import java.util.List;

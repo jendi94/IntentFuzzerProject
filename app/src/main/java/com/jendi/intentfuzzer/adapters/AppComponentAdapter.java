@@ -1,4 +1,4 @@
-package com.jendi.intentfuzzer;
+package com.jendi.intentfuzzer.adapters;
 
 import android.content.pm.ComponentInfo;
 import android.support.annotation.NonNull;
@@ -6,6 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jendi.intentfuzzer.viewholders.AppComponentViewHolder;
+import com.jendi.intentfuzzer.R;
 
 import java.util.List;
 
@@ -29,7 +32,7 @@ public class AppComponentAdapter extends RecyclerView.Adapter<AppComponentViewHo
 
     @Override
     public void onBindViewHolder(@NonNull AppComponentViewHolder appComponentViewHolder, int i) {
-        appComponentViewHolder.componentName.setText(componentInfos.get(i).name);
+        appComponentViewHolder.getComponentName().setText(componentInfos.get(i).name);
     }
 
     @Override

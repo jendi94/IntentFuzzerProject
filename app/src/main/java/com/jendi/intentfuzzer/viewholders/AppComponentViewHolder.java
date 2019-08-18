@@ -23,7 +23,5 @@ public class AppComponentViewHolder extends RecyclerView.ViewHolder implements V
 
     public TextView getComponentName() {
         return componentName;
-
-
     }
 }

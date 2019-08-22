@@ -6,19 +6,13 @@ import android.widget.TextView;
 
 import com.jendi.intentfuzzer.R;
 
-public class AppComponentViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class AppComponentViewHolder extends RecyclerView.ViewHolder {
 
-    TextView componentName;
+    private TextView componentName;
 
     public AppComponentViewHolder(View componentInfoView) {
         super(componentInfoView);
-        componentInfoView.setOnClickListener(this);
         this.componentName = componentInfoView.findViewById(R.id.component_name);
-    }
-
-    @Override
-    public void onClick(View v) {
-        //tutaj napisac fuzzing komponentow
     }
 
     public TextView getComponentName() {

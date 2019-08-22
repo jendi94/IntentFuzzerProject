@@ -1,6 +1,5 @@
 package com.jendi.intentfuzzer.adapters;
 
-import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,19 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jendi.intentfuzzer.viewholders.PackageInfoViewHolder;
 import com.jendi.intentfuzzer.R;
+import com.jendi.intentfuzzer.viewholders.PackageInfoViewHolder;
 
 import java.util.List;
 
 public class PackageInfoAdapter extends RecyclerView.Adapter<PackageInfoViewHolder> {
 
-    public List<PackageInfo> packageInfos;
-    private Context context;
+    private List<PackageInfo> packageInfo;
 
-    public PackageInfoAdapter(List<PackageInfo> packageInfos, Context context){
-        this.packageInfos = packageInfos;
-        this.context = context;
+    public PackageInfoAdapter(List<PackageInfo> packageInfo) {
+        this.packageInfo = packageInfo;
     }
 
     @NonNull
@@ -29,18 +26,17 @@ public class PackageInfoAdapter extends RecyclerView.Adapter<PackageInfoViewHold
 
         View packageInfoView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.row_package_info, viewGroup, false);
-
-        return new PackageInfoViewHolder(packageInfoView, packageInfos, context);
+        return new PackageInfoViewHolder(packageInfoView, packageInfo);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PackageInfoViewHolder packageInfoViewHolder, int i) {
-        packageInfoViewHolder.getPackageName().setText(packageInfos.get(i).applicationInfo.loadLabel(context.getPackageManager()).toString());
+        packageInfoViewHolder.getPackageName().setText(packageInfo.get(i).applicationInfo.loadLabel(packageInfoViewHolder.itemView.getContext().getPackageManager()).toString());
     }
 
     @Override
     public int getItemCount() {
-        return packageInfos.size();
+        return packageInfo.size();
     }
 
 }

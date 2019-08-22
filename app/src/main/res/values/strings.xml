@@ -7,7 +7,7 @@
     <string name="services">Services</string>
     <string name="others">Others</string>
     <string-array name="app_components">
-        <item></item>
+        <item>Please select a component type...</item>
         <item>Activities</item>
         <item>Services</item>
         <item>Others</item>
